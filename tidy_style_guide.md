@@ -13,9 +13,13 @@ library declarations should always come at the top of a script.
 
 Avoid the assignment operator `%<>%` whenever possible (which is to say, always).[1] Instead, use explicit assignment.
 
-``` r
-mtcars <- mtcars %>% 
-  transform(cyl = cyl * 2)
+``` diff
++mtcars <- mtcars %>% 
++  transform(cyl = cyl * 2)
+```
+
+``` diff
+-mtcars 
 ```
 
 <style>
